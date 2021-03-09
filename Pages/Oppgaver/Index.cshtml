@@ -1,0 +1,43 @@
+﻿@page
+@model VismaTest.Pages.Oppgaver.IndexModel
+
+@{
+    ViewData["Title"] = "Index";
+    Layout = "~/Pages/Shared/_Layout.cshtml";
+}
+
+<h1>Index</h1>
+
+<p>
+    <a asp-page="Create">Create New</a>
+</p>
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.Oppgave[0].OppgaveNavn)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Oppgave[0].OppgaveDato)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model.Oppgave) {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.OppgaveNavn)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.OppgaveDato)
+            </td>
+            <td>
+                <a asp-page="./Edit" asp-route-id="@item.OppgaveID">Edit</a> |
+                <a asp-page="./Details" asp-route-id="@item.OppgaveID">Details</a> |
+                <a asp-page="./Delete" asp-route-id="@item.OppgaveID">Delete</a>
+            </td>
+        </tr>
+}
+    </tbody>
+</table>

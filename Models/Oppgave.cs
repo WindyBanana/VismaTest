@@ -13,5 +13,6 @@ namespace VismaTest.Models
         [Required]
         [DataType(DataType.Date)]
         public DateTime OppgaveDato { get; set; }
+
     }
 }

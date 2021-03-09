@@ -11,8 +11,9 @@ namespace VismaTest.Data
     {
         public VismaTestContext(DbContextOptions<VismaTestContext> options)
             : base(options)
-        {
+        { 
         }
+
         public DbSet<Ansatt> Ansatt { get; set; }
 
         public DbSet<Stilling> Stilling { get; set; }
