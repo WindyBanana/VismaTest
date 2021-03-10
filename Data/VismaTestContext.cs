@@ -14,12 +14,12 @@ namespace VismaTest.Data
         { 
         }
 
-        public DbSet<Ansatt> Ansatt { get; set; }
+        public DbSet<Models.PositionTask> Employees { get; set; }
 
-        public DbSet<Stilling> Stilling { get; set; }
+        public DbSet<Models.Position> Positions { get; set; }
 
-        public DbSet<Oppgave> Oppgave { get; set; }
-        public DbSet<StillingsOppgave> StillingsOppgave { get; set; }
+        public DbSet<Models.Task> Tasks { get; set; }
+
 
 
     }

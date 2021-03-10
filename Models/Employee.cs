@@ -7,14 +7,13 @@ using System.ComponentModel.DataAnnotations.Schema;
 
 namespace VismaTest.Models
 {
-    public class Ansatt
-    {
-        public int AnsattID { get; set; }
+    public class PositionTask
+    {   [Key]
+        public int EmployeeID { get; set; }
         
-        [Index(IsUnique = true)]
         [Required]
-        public string AnsattNavn { get; set; }
-        public ICollection<Stilling> Stillinger { get; set; }
+        public string EmployeeName { get; set; }
+        public ICollection<Position> Positions { get; set; }
 
     }
 }

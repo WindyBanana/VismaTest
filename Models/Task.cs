@@ -5,14 +5,14 @@ using System.Threading.Tasks;
 using System.ComponentModel.DataAnnotations;
 namespace VismaTest.Models
 {
-    public class Oppgave    
+    public class Task    
     {
-        public int OppgaveID { get; set; }
+        public int TaskID { get; set; }
         [Required]
-        public string OppgaveNavn { get; set; }
+        public string TaskName { get; set; }
         [Required]
         [DataType(DataType.Date)]
-        public DateTime OppgaveDato { get; set; }
+        public DateTime TaskDate { get; set; }
 
     }
 }
