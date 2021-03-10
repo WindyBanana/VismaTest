@@ -8,16 +8,18 @@ namespace VismaTest.Models
 {
     public class Position
     {
+        [Key]
         public int PositionID { get; set; }
         [Required]
         public string PositionTitle { get; set; }
+        [Required]
         [DataType(DataType.Date)]
         public DateTime PositionStartDate { get; set; }
+        [Required]
         [DataType(DataType.Date)]
         public DateTime PositionEndDate { get; set; }
-
-        public PositionTask PositionTask { get; set; }
-        public virtual ICollection<Employee> Employees { get; set; }
+        public PositionMission PositionMission { get; set; }
+        public ICollection<Employee> Employees { get; set; }
 
     }
 }

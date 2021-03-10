@@ -5,14 +5,16 @@ using System.Threading.Tasks;
 using System.ComponentModel.DataAnnotations;
 namespace VismaTest.Models
 {
-    public class Task    
+    public class Mission   
     {
-        public int TaskID { get; set; }
+        [Key]
+        public int MissionID { get; set; }
         [Required]
-        public string TaskName { get; set; }
+        public string MissionName { get; set; }
         [Required]
         [DataType(DataType.Date)]
-        public DateTime TaskDate { get; set; }
+        public DateTime MissionDate { get; set; }
+        public PositionMission PositionMission { get; set; }
 
     }
 }

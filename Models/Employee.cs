@@ -7,7 +7,7 @@ using System.ComponentModel.DataAnnotations.Schema;
 
 namespace VismaTest.Models
 {
-    public class PositionTask
+    public class Employee
     {   [Key]
         public int EmployeeID { get; set; }
         
