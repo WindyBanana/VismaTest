@@ -13,7 +13,8 @@ namespace VismaTest.Models
         
         [Required]
         public string EmployeeName { get; set; }
-        public ICollection<Position> Positions { get; set; }
+        public Position Position { get; set; }
+        public IList<Position> Positions { get; set; }
 
     }
 }

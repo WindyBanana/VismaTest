@@ -18,8 +18,7 @@ namespace VismaTest.Models
         [Required]
         [DataType(DataType.Date)]
         public DateTime PositionEndDate { get; set; }
-        public PositionMission PositionMission { get; set; }
-        public ICollection<Employee> Employees { get; set; }
 
+     //   public ICollection<Mission> Missions { get; set; }
     }
 }
