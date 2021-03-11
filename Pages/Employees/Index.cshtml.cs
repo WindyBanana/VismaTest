@@ -20,10 +20,11 @@ namespace VismaTest.Pages.Employees
         }
 
         public IList<Employee> Employee { get;set; }
-
+        public IList<EmployeePosition> EmployeePositions { get; set; }
         public async Task OnGetAsync()
         {
             Employee = await _context.Employees.ToListAsync();
+                EmployeePositions= await _context.EmployeePositions.ToListAsync();
         }
     }
 }

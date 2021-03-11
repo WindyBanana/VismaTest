@@ -17,19 +17,25 @@
             <th>
                 @Html.DisplayNameFor(model => model.Employee[0].EmployeeName)
             </th>
+            <th>
+                @Html.DisplayNameFor(model => model.EmployeePositions[0].PositionTitle)
+            </th>
             <th></th>
         </tr>
     </thead>
     <tbody>
-@foreach (var item in Model.Employee) {
+@foreach (var item in Model.EmployeePositions) {
         <tr>
             <td>
                 @Html.DisplayFor(modelItem => item.EmployeeName)
             </td>
             <td>
-                <a asp-page="./Edit" asp-route-id="@item.EmployeeID">Edit</a> |
-                <a asp-page="./Details" asp-route-id="@item.EmployeeID">Details</a> |
-                <a asp-page="./Delete" asp-route-id="@item.EmployeeID">Delete</a>
+                @Html.DisplayFor(modelItem => item.PositionTitle)
+            </td>
+            <td>
+                <a asp-page="./Edit" asp-route-id="@item.EmployeePositionID">Edit</a> |
+                <a asp-page="./Details" asp-route-id="@item.EmployeePositionID">Details</a> |
+                <a asp-page="./Delete" asp-route-id="@item.EmployeePositionID">Delete</a>
             </td>
         </tr>
 }
