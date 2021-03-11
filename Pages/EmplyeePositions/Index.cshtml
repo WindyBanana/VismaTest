@@ -1,0 +1,43 @@
+﻿@page
+@model VismaTest.Pages.EmplyeePositions.IndexModel
+
+@{
+    ViewData["Title"] = "Index";
+    Layout = "~/Pages/Shared/_Layout.cshtml";
+}
+
+<h1>Index</h1>
+
+<p>
+    <a asp-page="Create">Create New</a>
+</p>
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.EmployeePosition[0].EmployeeName)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.EmployeePosition[0].PositionTitle)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model.EmployeePosition) {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.EmployeeName)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.PositionTitle)
+            </td>
+            <td>
+                <a asp-page="./Edit" asp-route-id="@item.EmployeePositionID">Edit</a> |
+                <a asp-page="./Details" asp-route-id="@item.EmployeePositionID">Details</a> |
+                <a asp-page="./Delete" asp-route-id="@item.EmployeePositionID">Delete</a>
+            </td>
+        </tr>
+}
+    </tbody>
+</table>

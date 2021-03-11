@@ -18,8 +18,7 @@ namespace VismaTest.Data
         public DbSet<Position> Positions { get; set; }
         public DbSet<Mission> Missions { get; set; }
         public DbSet<PositionMission> PosiotionMissions { get; set; }
-
-
+        public DbSet<EmployeePosition> EmployeePositions { get; set; }
 
     }
 }

@@ -3,15 +3,17 @@ using System;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 using VismaTest.Data;
 
 namespace VismaTest.Migrations
 {
     [DbContext(typeof(VismaTestContext))]
-    partial class VismaTestContextModelSnapshot : ModelSnapshot
+    [Migration("20210311011159_AddedEmployeePosition")]
+    partial class AddedEmployeePosition
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -50,14 +52,14 @@ namespace VismaTest.Migrations
                     b.Property<int?>("EmployeeID")
                         .HasColumnType("int");
 
-                    b.Property<string>("EmployeeName")
-                        .HasColumnType("nvarchar(max)");
+                    b.Property<int>("EmployeeName")
+                        .HasColumnType("int");
 
                     b.Property<int?>("PositionID")
                         .HasColumnType("int");
 
-                    b.Property<string>("PositionTitle")
-                        .HasColumnType("nvarchar(max)");
+                    b.Property<int>("PositionName")
+                        .HasColumnType("int");
 
                     b.HasKey("EmployeePositionID");
 
@@ -124,14 +126,14 @@ namespace VismaTest.Migrations
                     b.Property<int?>("MissionID")
                         .HasColumnType("int");
 
-                    b.Property<string>("MissionName")
-                        .HasColumnType("nvarchar(max)");
+                    b.Property<int>("MissionName")
+                        .HasColumnType("int");
 
                     b.Property<int?>("PositionID")
                         .HasColumnType("int");
 
-                    b.Property<string>("PositionTitle")
-                        .HasColumnType("nvarchar(max)");
+                    b.Property<int>("PositionTitle")
+                        .HasColumnType("int");
 
                     b.HasKey("PositionTaskID");
 

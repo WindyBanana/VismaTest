@@ -6,13 +6,13 @@ using System.Threading.Tasks;
 
 namespace VismaTest.Models
 {
-    public class PositionMission
+    public class EmployeePosition
     {
         [Key]
-        public int PositionTaskID { get; set; }
+        public int EmployeePositionID { get; set; }
         public string PositionTitle { get; set; }
-        public string MissionName { get; set; }
+        public string EmployeeName { get; set; }
         public Position Position { get; set; }
-        public Mission Mission { get; set; }
+        public Employee Employee { get; set; }
     }
 }
